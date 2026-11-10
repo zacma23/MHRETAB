@@ -1,0 +1,66 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-heading: 'Outfit', sans-serif;
+    --font-body: 'Plus Jakarta Sans', sans-serif;
+    --font-serif: 'Playfair Display', serif;
+    --color-navy-base: #080f24;
+    --color-navy-surface: #0e1938;
+    --color-navy-border: #1e2c56;
+    --color-gold: #c5a059;
+    --color-gold-light: #dfbe76;
+    --color-gold-hover: #d8af60;
+  }
+
+  body {
+    font-family: var(--font-body);
+    background-color: var(--color-navy-base);
+    color: #f1f5f9;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+  }
+}
+
+/* Custom scrollbar for refined elegance */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #080f24;
+}
+::-webkit-scrollbar-thumb {
+  background: #1e2c56;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #c5a059;
+}
+
+/* Subtle gold glow utility */
+.gold-glow {
+  box-shadow: 0 0 25px rgba(197, 160, 89, 0.18);
+}
+.navy-card {
+  background: linear-gradient(135deg, rgba(17, 29, 56, 0.85) 0%, rgba(11, 20, 42, 0.95) 100%);
+  border: 1px solid rgba(197, 160, 89, 0.16);
+}
+.navy-card:hover {
+  border-color: rgba(197, 160, 89, 0.4);
+}
+
+/* Print styling for CV download/print */
+@media print {
+  body {
+    background: white !important;
+    color: #0f172a !important;
+  }
+  .no-print {
+    display: none !important;
+  }
+  .print-only {
+    display: block !important;
+  }
+}
